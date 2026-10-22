@@ -29,7 +29,7 @@ The docs are built with [MkDocs Material](https://squidfunk.github.io/mkdocs-mat
 
 ```bash
 python3 -m venv ~/.venvs/mkdocs
-~/.venvs/mkdocs/bin/pip install mkdocs-material
+~/.venvs/mkdocs/bin/pip install -r requirements.txt
 ~/.venvs/mkdocs/bin/mkdocs serve
 ```
 
