@@ -1,0 +1,120 @@
+site_name: Community Water Management System
+site_description: Business requirements and project documentation for the multi-organization Community Water Management System
+site_url: ''
+repo_url: ''
+
+# Website appearance
+theme:
+  name: material
+  language: en
+
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: teal
+      media: "(prefers-color-scheme: light)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      media: "(prefers-color-scheme: dark)"
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+  features:
+    # Navigation
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+
+    # Table of contents
+    - toc.follow
+
+    # Search
+    - search.suggest
+    - search.highlight
+
+    # Content
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+
+nav:
+  - Home: index.md
+  - Requirements:
+      - Overview: requirements/overview.md
+      - Platform administration: requirements/platform-administration.md
+      - Organizations and schemes: requirements/organizations-and-schemes.md
+      - Roles and permissions: requirements/roles-and-permissions.md
+      - Customer management: requirements/customer-management.md
+      - Meter reading and water tracking: requirements/meter-reading.md
+      - Billing and tariffs: requirements/billing.md
+      - M-Pesa payments: requirements/payments.md
+      - Penalties, disconnection, and reconnection: requirements/disconnection-and-reconnection.md
+      - Problem reports: requirements/problem-reports.md
+      - Customer communication: requirements/communication.md
+      - Expenses and funding: requirements/expenses.md
+      - Reports: requirements/reports.md
+      - Data import: requirements/data-import.md
+  - Workflows:
+      - Organization onboarding: workflows/organization-onboarding.md
+      - Customer registration: workflows/customer-registration.md
+      - Tenant move-in and move-out: workflows/tenant-move-in-move-out.md
+      - Meter reading: workflows/meter-reading-process.md
+      - M-Pesa payments: workflows/mpesa-payment-process.md
+      - Disconnection and reconnection: workflows/disconnection-reconnection.md
+      - Problem report: workflows/problem-report.md
+  - Architecture:
+      - System architecture: architecture/system-architecture.md
+  - Development:
+      - Local setup: development/local-setup.md
+
+# Search plugin
+plugins:
+  - search
+
+# Markdown formatting and diagrams
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+
+  - toc:
+      permalink: true
+
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  - pymdownx.tabbed:
+      alternate_style: true
+
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+# Output directory
+site_dir: site
